@@ -1415,6 +1415,7 @@ This is the main (stand-alone) style sheet for the main index.cfm page
 
 .masthead-container {
 	display: flex;
+    flex-direction: column;
 	justify-content: space-between;
 	margin: 0 1rem;
 }
@@ -1422,7 +1423,16 @@ This is the main (stand-alone) style sheet for the main index.cfm page
 .masthead-logo {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+}
+
+@media only screen and (min-width: 1150px) {
+    .masthead-logo {
+        justify-content: space-between;
+    }
+
+    .masthead-container {
+        flex-direction: row;
+    }
 }
 
 .masthead-links {
